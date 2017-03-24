@@ -26,3 +26,26 @@ personneDefaut2.insert('Nelsonne', 'Mélodie');
 
 repertoire.push(personneDefaut1);
 repertoire.push(personneDefaut2);
+while(true) {
+    console.log('1 : Lister les contacts');
+    console.log('2 : Ajouter un contact');
+    console.log('0 : Quitter');
+    var saisie = prompt('Choisissez un option:');
+    if (saisie == 0) {
+        console.log('Au revoir!');
+        break;
+    }
+    else if (saisie == 1) {
+        repertoire.forEach(function (repertoire) {
+            console.log(repertoire.lister());
+        });
+    }
+    else if (saisie == 2){
+        var nom = prompt('Entrez le nom du nouveau contact:');
+        var prenom = prompt('Entrez le nom du nouveau contact:');
+        var nouvellePersonne = Object.create(personne);
+        nouvellePersonne.insert(nom, prenom);
+        repertoire.push(nouvellePersonne);
+        console.log('Le nouveau contact a bien été ajouté');
+    }
+}

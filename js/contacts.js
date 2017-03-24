@@ -48,4 +48,7 @@ while(true) {
         repertoire.push(nouvellePersonne);
         console.log('Le nouveau contact a bien été ajouté');
     }
+    else if (saisie == 3){
+        console.log('lol');
+    }
 }
